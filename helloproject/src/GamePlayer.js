@@ -3,9 +3,9 @@ var GameLayer = cc.LayerColor.extend({
         this._super( new cc.Color( 25, 180, 125, 255 ) );
         this.setPosition( new cc.Point( 0, 0 ) );
         
-        this.player = new Player ();
-        this.player.setPosition( new cc.Point(150,360));
-        this.addChild (this.player);
+          this.player = new Player();
+        this.player.setPosition( new cc.Point( screenWidth / 2, screenHeight / 2 ) );
+        this.addChild( this.player, 1 );
         this.player.scheduleUpdate();
         
         this.pillarPair = null ;

@@ -26,5 +26,11 @@ var PillarPair = cc.Node.extend({
         
     },
     
+    hit: function(pplayer){
+        var playerPos = player.getPosition();
+        var myPos = this.getPosition();
+        return checkPlayerPillarCollistion( playerPos.x , playerPos.y , myPos.x , myPos.y );
+    }
+    
     
 });

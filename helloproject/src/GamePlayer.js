@@ -50,7 +50,7 @@ var GameLayer = cc.LayerColor.extend({
     },
     createPillarPair: function() {
         this.pillarPair = new PillarPair();
-        this.pillarPair.setPosition( new cc.Point( 300, 370 ) );
+        this.pillarPair.setPosition( new cc.Point( 400, 370 ) );
         this.addChild( this.pillarPair );
         this.pillarPair.scheduleUpdate();
     }

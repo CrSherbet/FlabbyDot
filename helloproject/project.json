@@ -14,6 +14,7 @@
     "jsList" : [
         "src/resource.js",
         "src/Player.js",
-        "src/GamePlayer.js"
+        "src/GamePlayer.js",
+        "src/PillarPair.js"
     ]
 }

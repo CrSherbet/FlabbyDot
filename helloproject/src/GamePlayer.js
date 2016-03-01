@@ -8,6 +8,10 @@ var GameLayer = cc.LayerColor.extend({
         this.addChild (this.player);
         this.player.scheduleUpdate();
         
+        this.pillarPair = new PillarPair();
+        this.pillarPair.setPosition( new cc.Point( 300, 370 ) );
+        this.addChild( this.pillarPair );
+        
         this.addKeyboardHandlers();
         this.state = GameLayer.STATES.FRONT;
         

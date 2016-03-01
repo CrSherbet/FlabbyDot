@@ -14,21 +14,17 @@ var PillarPair = cc.Node.extend({
     this.topPillar.setAnchorPoint( new cc.Point( 0.5, 0 ) );
     this.topPillar.setPosition( new cc.Point( 0, 100 ) );
     
-    this.started = false;
     },
     
     update: function( dt ) {
         var pos = this.getPosition();
-        if (this.started){
         this.setPositionX( this.getPositionX() - 5 );
-        }
+        
         if (pos.x <= 0){
            this.setPosition( new cc.Point( 480 , pos.y ) );
         }
         
     },
     
-    start: function(){
-        this.started = true;
-    }
+    
 });

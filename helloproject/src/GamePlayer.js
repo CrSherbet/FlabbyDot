@@ -8,10 +8,8 @@ var GameLayer = cc.LayerColor.extend({
         this.addChild (this.player);
         this.player.scheduleUpdate();
         
-        this.pillarPair = new PillarPair();
-        this.pillarPair.setPosition( new cc.Point( 300, 370 ) );
-        this.addChild( this.pillarPair );
-        this.pillarPair.scheduleUpdate();
+        this.pillarPair = null ;
+      
         
         this.addKeyboardHandlers();
         this.state = GameLayer.STATES.FRONT;
@@ -36,7 +34,8 @@ var GameLayer = cc.LayerColor.extend({
       if ( this.state == GameLayer.STATES.FRONT ) {
             this.state = GameLayer.STATES.STARTED;
             this.player.start();
-            this.pillarPair.start();
+          this.createPillarPair();
+          //  this.pillarPair.start();
             this.player.jump();
         }
         if ( this.state == GameLayer.STATES.STARTED ) {
@@ -45,7 +44,15 @@ var GameLayer = cc.LayerColor.extend({
     },
  
     onKeyUp: function( keyCode, event ) {
+    },
+    
+    createPillarPair: function() {
+        this.pillarPair = new PillarPair();
+        this.pillarPair.setPosition( new cc.Point( 300, 370 ) );
+        this.addChild( this.pillarPair );
+        this.pillarPair.scheduleUpdate();
     }
+
 });
 
 GameLayer.STATES = {

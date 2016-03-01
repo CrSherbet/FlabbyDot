@@ -32,13 +32,10 @@ var GameLayer = cc.LayerColor.extend({
  
     onKeyDown: function( keyCode, event ) {
       if ( this.state == GameLayer.STATES.FRONT ) {
+            this.startGame();
             this.state = GameLayer.STATES.STARTED;
-            this.player.start();
-          this.createPillarPair();
-          //  this.pillarPair.start();
-            this.player.jump();
         }
-        if ( this.state == GameLayer.STATES.STARTED ) {
+       else if ( this.state == GameLayer.STATES.STARTED ) {
             this.player.jump();
         }
     },
@@ -46,6 +43,11 @@ var GameLayer = cc.LayerColor.extend({
     onKeyUp: function( keyCode, event ) {
     },
     
+    startGame: function(){
+        this.createPillarPair();
+        this.player.start();
+        this.player.jump(); 
+    },
     createPillarPair: function() {
         this.pillarPair = new PillarPair();
         this.pillarPair.setPosition( new cc.Point( 300, 370 ) );

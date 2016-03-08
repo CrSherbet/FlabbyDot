@@ -16,6 +16,7 @@
         "src/Player.js",
         "src/GamePlayer.js",
         "src/PillarPair.js",
-        "src/coldetect.js"
+        "src/coldetect.js",
+        "src/BG.js"
     ]
 }

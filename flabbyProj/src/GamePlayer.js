@@ -14,8 +14,7 @@ var GameLayer = cc.LayerColor.extend({
             
         this.addKeyboardHandlers();
         this.state = GameLayer.STATES.FRONT;
-        this.scheduleUpdate();
-        
+        this.scheduleUpdate();       
 	return true;
     },
     

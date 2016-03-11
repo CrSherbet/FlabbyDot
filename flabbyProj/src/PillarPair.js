@@ -17,8 +17,8 @@ var PillarPair = cc.Node.extend({
         var pos = this.getPosition();
         this.setPositionX( this.getPositionX() - 5 );
         
-        if (pos.x <= 0){
-           this.setPosition( new cc.Point( 480 , pos.y ) );
+        if (pos.x <= -25){
+             this.setPosition( new cc.Point( 480 , this.randomPositionY()) );
         }
         
     },
@@ -30,7 +30,9 @@ var PillarPair = cc.Node.extend({
     },
     stop: function(){
         this.start =false;
+    },
+    randomPositionY: function(){
+        return 110+ (Math.random()*650) ;
     }
-    
     
 });

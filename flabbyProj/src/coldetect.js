@@ -10,9 +10,6 @@ var checkPlayerPillarCollision = function( playerX, playerY, pillarX, pillarY ) 
     else {
         return false;
     }
-    function hi() {
-        console.log('hiiiii test')
-    } 
 
     
 };
